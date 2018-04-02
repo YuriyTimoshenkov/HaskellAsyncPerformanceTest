@@ -1,0 +1,71 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0a27e9ae94347248f6688c12e28b22423292df8cc4078ca66dc34e3ccadcdbfe
+
+name:           haskell-performance-test
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/haskell-performance-test#readme>
+homepage:       https://github.com/githubuser/haskell-performance-test#readme
+bug-reports:    https://github.com/githubuser/haskell-performance-test/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-performance-test
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+
+  other-modules:
+      Paths_haskell_performance_test
+  default-language: Haskell2010
+
+executable haskell-performance-test-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+    , src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-performance-test
+    , scotty
+    , text
+    , mtl
+    , async
+    , http-conduit
+    , http-types
+    , monad-logger
+    , bytestring
+  other-modules:
+      Paths_haskell_performance_test
+  default-language: Haskell2010
+
+test-suite haskell-performance-test-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-performance-test
+  other-modules:
+      Paths_haskell_performance_test
+  default-language: Haskell2010
