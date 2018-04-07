@@ -3,4 +3,4 @@ module Main where
 import RestServer
 
 main :: IO ()
-main = restServer "http://www.mocky.io/v2/5ac1ce7f3300002a00872db3"
+main = restServer "http://localhost:3000/order/wow23"
